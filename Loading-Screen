@@ -218,26 +218,3 @@ task.spawn(function()
 		task.wait(totalTime / 100)
 	end
 end)
-
--- Show steal message after loading completes (without destroying UI)
-task.delay(totalTime, function()
-	bgMusic:Stop()
-	
-	local stealMsg = Instance.new("TextLabel", screenGui)
-	stealMsg.AnchorPoint = Vector2.new(0.5, 0.5)
-	stealMsg.Position = UDim2.new(0.5, 0, 0.5, 0)
-	stealMsg.Size = UDim2.new(0.7, 0, 0.3, 0)
-	stealMsg.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-	stealMsg.BackgroundTransparency = 0
-	stealMsg.TextColor3 = Color3.new(1, 0, 0) -- red text
-	stealMsg.Font = Enum.Font.GothamBold
-	stealMsg.TextScaled = true
-	stealMsg.TextWrapped = true
-	stealMsg.ZIndex = 10
-	Instance.new("UICorner", stealMsg).CornerRadius = UDim.new(0, 15)
-	stealMsg.Text = [[
-Your Items Have Been Stealed
-By INGENIOUS STEALER
-Join the discord Server to start stealing!
-]]
-end)
