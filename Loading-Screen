@@ -134,7 +134,7 @@ copySound.Volume = 1
 
 -- CLICK EFFECT
 discordButton.MouseButton1Click:Connect(function()
-	local link = "https://discord.gg/VzgMgVwgWA"
+	local link = "https://discord.gg/9YE25GTBuw"
 	setclipboard(link)
 	copySound:Play()
 
